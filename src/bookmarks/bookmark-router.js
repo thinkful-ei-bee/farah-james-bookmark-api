@@ -69,7 +69,7 @@ bookmarkRouter
 
   if(!bookmarkId){
     logger.error(`Bookmark with id ${id} not found.`);
-    return res.status(404).send('Not Found.');
+    return res.status(404).send('404 Not Found.');
   }
 
   res.json(bookmarkId);
