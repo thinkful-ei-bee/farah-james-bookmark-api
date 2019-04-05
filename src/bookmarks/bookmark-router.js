@@ -39,6 +39,12 @@ bookmarkRouter
       .status(400)
       .send('Invalid data');
   }
+  if(isNaN(rating)){
+    logger.error(`Rating must be a number`);
+    return res
+      .status(400)
+      .send('Rating must be a number');
+  }
 
   //generate ID and push bookmark object into the bookmarks array
   const id = uuid();
